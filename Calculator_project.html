@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Calculator </title>
+		
+		
+<!-- 
+	Using HTML, CSS and JavaScript
+	 Final Project - Calculator
+
+-->
+		
+ <script language="javascript">
+			
+			// Functions using javascript here:
+			
+				function c(val)
+					
+						{
+							document.getElementById("answer").value=val;
+						}
+					
+						function math(val)
+
+								{
+									document.getElementById("answer").value+=val;
+								}
+					
+										function e()
+
+												{
+														try
+															{
+															  c(eval(document.getElementById("answer").value))
+															}
+													
+														catch(e)
+															{
+															  c('Error')
+															}
+
+												}
+
+	</script>
+        
+
+		
+        <style type="text/css">
+			
+		/* 		Beginning of CSS code;
+				The position and color of the background in blue ;
+		*/
+			
+			.box
+			
+			{	
+				position: relative;
+				background-color:#5186fd;
+				border-style:solid;
+				height:410px;
+				width:270px;
+				border-radius:30px;
+				top:60px;
+				left:800px;	
+			}
+			
+            .button
+			
+            {
+				position: relative;
+                width:60px;
+                height:50px;
+				border-radius: 30px;
+				cursor: pointer;
+				font-size: 20px;
+            }
+			
+			
+		/* The position and adjustment of the buttons*/
+			
+            .display input
+			
+            {
+                position: relative;
+                left:14px;
+                top:20px;
+                height:35px;
+                color:black;
+                background-color: #979fd9;
+                text-align:right;
+                font-size:14.75px;
+            }
+			
+			
+			.keys
+			{
+				position: relative;
+				top:20px;
+				left:10px;
+			}
+			
+			
+			.button.red
+			{
+				background: #ff4f4f;
+				color:white;
+			}
+			
+			
+			.button.green
+			{
+				background: #0a930a;
+				color: white;
+				width:120px;
+			}
+			
+			
+			.button.orange
+			{
+				
+				background:orange;
+				color:white;
+			}
+			
+			
+			.button.gray
+			{
+				background:#606060;
+				color:white;
+			}
+			
+			
+			h1 
+			{
+    			text-align: center;
+				color: blue
+			}
+
+		
+        </style>
+		
+
+        
+	</head>
+	
+	
+<body>
+	
+								<!-- Buttons -->
+	
+	<h1>Simple Calculator</h1>
+			<div class="box">
+			<div class="display"><input type="text" readonly size="30"  id="answer"></div>
+			<div class="keys">
+		
+    
+            <p>
+			<input type="button" class="button orange" value="AC" onclick='c("")'>
+            <input type="button" class="button orange" value="(" onclick='math("(")'>
+            <input type="button" class="button orange" value=")" onclick='math(")")'>
+            <input type="button" class="button red"    value="/" onclick='math("/")'>        
+            </p>
+                
+            <p>
+            <input type="button" class="button gray" value="7" onclick='math("7")'>
+            <input type="button" class="button gray" value="8" onclick='math("8")'>
+            <input type="button" class="button gray" value="9" onclick='math("9")'>
+            <input type="button" class="button red" value="*" onclick='math("*")'>
+            </p>
+            
+            <p>
+            <input type="button" class="button gray" value="4" onclick='math("4")'>
+            <input type="button" class="button gray" value="5" onclick='math("5")'>
+            <input type="button" class="button gray" value="6" onclick='math("6")'>
+            <input type="button" class="button red" value="-" onclick='math("-")'>
+            </p>
+                
+            <p>
+            <input type="button" class="button gray" value="1" onclick='math("1")'>
+            <input type="button" class="button gray" value="2" onclick='math("2")'>
+            <input type="button" class="button gray" value="3" onclick='math("3")'>
+			<input type="button" class="button red" value="+" onclick='math("+")'>
+			</p>
+		
+		    <p>	
+			
+			<input type="button" class="button gray" value="0" onclick='math("0")'>
+			<input type="button" class="button orange" value="." onclick='math(".")'>
+			<input type="button" class="button green" value="="  onclick='e()'>
+		
+            </p>
+		
+	</div>
+	</div>
+</body>
+</html>
